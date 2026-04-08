@@ -12,7 +12,7 @@ public class Main extends Application{
 	public void start(Stage stage) throws Exception{
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("view/adderView.fxml"));
+		loader.setLocation(Main.class.getResource("../view/adderView.fxml"));
 		
 		Pane view = loader.load();
 		
