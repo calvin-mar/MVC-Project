@@ -5,37 +5,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 
 public class AdderModel {
 	
-	DoubleProperty firstNum = new SimpleDoubleProperty(); 
-	DoubleProperty secondNum = new SimpleDoubleProperty();
 	DoubleProperty resultNum = new SimpleDoubleProperty();
-	
-	/**
-	 * @return the firstNum
-	 */
-	public DoubleProperty getFirstNum() {
-		return firstNum;
-	}
-	
-	/**
-	 * @param firstNum the firstNum to set
-	 */
-	public void setFirstNum(DoubleProperty firstNum) {
-		this.firstNum = firstNum;
-	}
-	
-	/**
-	 * @return the secondNum
-	 */
-	public DoubleProperty getSecondNum() {
-		return secondNum;
-	}
-	
-	/**
-	 * @param secondNum the secondNum to set
-	 */
-	public void setSecondNum(DoubleProperty secondNum) {
-		this.secondNum = secondNum;
-	}
 	
 	/**
 	 * @return the resultNum
@@ -54,7 +24,7 @@ public class AdderModel {
 	
 	// Adding function
 	public void addNumbers(double first, double second) {
-		
+		resultNum.set(first + second);
 	}
 
 }
