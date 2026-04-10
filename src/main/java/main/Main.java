@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import model.AdderModel;
+import view.AdderController;
 
 
 public class Main extends Application{
@@ -13,8 +15,12 @@ public class Main extends Application{
 		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("../view/adderView.fxml"));
-		
 		Pane view = loader.load();
+		
+		AdderController controller = loader.getController();
+		controller.setModel(new AdderModel());
+		
+		
 		
 		Scene s = new Scene(view);
 		stage.setScene(s);
